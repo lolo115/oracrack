@@ -1,3 +1,6 @@
+# Created by Laurent Leturgez (leturgezl[a@t]gmail.com)
+# Script under GPL License.
+
 import hashlib
 import binascii as ba
 import sys
