@@ -1,6 +1,4 @@
-# Created by Laurent Leturgez (leturgezl[a@t]gmail.com)
-# Script under GPL License.
-
+#!/usr/bin/python
 import hashlib
 from Crypto.Cipher import DES
 from binascii import hexlify, unhexlify
@@ -11,7 +9,7 @@ import os
 ORACLE10_MAGIC = b"\x01\x23\x45\x67\x89\xAB\xCD\xEF"
 
 def des_cbc_encrypt(key, value, iv=b'\x00' * 8, pad=b'\x00'):
-    value += pad * (-len(value) % 8) 
+    value += pad * (-len(value) % 8) # null pad to multiple of 8
     hash = iv # start things off
     for offset in xrange(0,len(value),8):
         chunk = xor_bytes(hash, value[offset:offset+8])
@@ -35,6 +33,9 @@ def xor_bytes(l, r):
 
 if len(sys.argv) != 4:
 	print ("ERROR")
+	print ("---------------------------------------------------------------------------")
+	print ("Usage:")
+	print (sys.argv[0]+" <DICTIONARY FILE> <USERNAME> <10G_PASSWORD_HASH>")
 	sys.exit(1)
 
 print ("DICTFILE = "+sys.argv[1])
