@@ -9,7 +9,7 @@ if len(sys.argv) != 4:
         print ("ERROR")
         print ("---------------------------------------------------------------------------")
         print ("Usage:")
-        print (sys.argv[0]+" <DICTIONARY FILE> <USERNAME> <10G_PASSWORD_HASH>")
+        print (sys.argv[0]+" <DICTIONARY FILE> <USERNAME> <11G_PASSWORD_HASH>")
         sys.exit(1)
 
 print ("DICTFILE = "+sys.argv[1])
