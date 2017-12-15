@@ -56,7 +56,7 @@ for line in f:
         if calc_checksum(username,p2test) == submitted_hash.upper():
 		print ("PASSWORD FOUND FOR USER "+username+" !!! PASSWORD IS: "+p2test)
                 print ("------")
-		print ("Be careful, the found password is case unsensitive. The real password can include upper character(s)")
+		print ("Be careful, the found password is case insensitive. The real password can include upper character(s)")
 		print ("Now generate all combinations for this password and run ora11g_hash_bf.py script to find the case sensitive password")
 		sys.exit(0)
 
