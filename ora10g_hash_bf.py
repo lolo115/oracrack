@@ -61,5 +61,5 @@ for line in f:
 		sys.exit(0)
 
 print ("Password not found")
-
+close(f)
 
