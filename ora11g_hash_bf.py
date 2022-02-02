@@ -38,5 +38,5 @@ for line in f:
                 print ("PASSWORD FOUND FOR USER "+username+" !!! PASSWORD IS: "+p2test)
 		sys.exit(0)
 print("Password not found")
-
+close(f)
 
